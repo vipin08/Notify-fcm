@@ -30,7 +30,7 @@ gem 'notify_fcm'
 ```
 ## Usage
 
-* ### Example sending notifications:
+* Example sending notifications:
 
 ```ruby
 require 'notify_fcm'
