@@ -5,10 +5,11 @@ require 'cgi'
 
 class NOTIFY_FCM
   include HTTParty
-  attr_accessor :body,  :title
-  base_uri 'https://android.googleapis.com/gcm'
+  attr_accessor :body,  :title, :icon, :sound, :vibrate, :color, :priority
+  base_uri 'https://fcm.googleapis.com/fcm'
+
   # constants
-  NOTIFICATION_BASE_URI = 'https://android.googleapis.com/gcm'
+  # NOTIFICATION_BASE_URI = 'https://android.googleapis.com/gcm'
 
   def initialize(api_key, options = {})
     @api_key = api_key
@@ -42,7 +43,7 @@ class NOTIFY_FCM
   end
 
   def message_body()
-     {notification: { body: body, title: title}}
+     {notification: { body: body, title: title, icon: icon, sound: sound, vibrate: true, color: color, priority: priority}}
   end
 
   def response_builder(response)
