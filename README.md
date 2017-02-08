@@ -43,6 +43,10 @@ fcm.title="My Title"                  # Set Title
  
 fcm.body ="My Body"                   # Set Body
 
+fcm.color = "#000000"                 # Set Colour Code
+
+fcm.sound = "default"                 # Set your Notification sound
+
 response = fcm.send(device_token)     # Send Notification
 ```
 
