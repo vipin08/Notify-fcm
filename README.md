@@ -35,12 +35,12 @@ gem 'notify_fcm'
 ```ruby
 require 'notify_fcm'
 
-fcm = FCM.new("API-KEY")
+fcm = NOTIFY_FCM.new("API-KEY")
 
 device_token= ["xxxxxxxx", "xxxxxxx"] # an array of one or more client device tokens
 
 fcm.title="My Title"                  # Set Title
- 
+
 fcm.body ="My Body"                   # Set Body
 
 fcm.color = "#000000"                 # Set Colour Code

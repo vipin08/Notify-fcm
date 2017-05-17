@@ -19,7 +19,7 @@ class NOTIFY_FCM
   def send_notification(registration_ids, options = {})
 
   raise ArgumentError, 'Api Key not Found' unless !@api_key.nil?
-  raise ArgumentError, 'Body is missing' unless !body.nil?  
+  raise ArgumentError, 'Body is missing' unless !body.nil?
   raise ArgumentError, 'DeviceToken not Found' unless !registration_ids.empty?
 
     message = message_body()
